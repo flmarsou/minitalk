@@ -4,11 +4,15 @@ WIP
 
 # ⚒️ Compilation
 
-WIP
+1. Run `make` to compile the server and the client.
+Run `make re` to recompile everything.
+2. Run `./server` to execute the server.
+3. Run `./client <PID> <messasge>` <ins>in another terminal!</ins>
 
 # 🧼 Cleaning
 
-WIP
+1. Run `make clean` to remove every object files.
+2. Run `make fclean` to remove every object files, including the executable.
 
 # ✨ Summary
 
