@@ -6,21 +6,41 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:49:12 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/07/02 15:59:08 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/07/03 14:42:26 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minitalk.h"
 
-int	main(int argc, const char **argv)
+static void	sender(int pid, char *msg)
 {
-	int			pid;
-	const char	*msg;
-	if (argc == 3)
+	int	c;
+	int	i;
+	int	bit;
+
+	c = 0;
+	while (msg[c])
 	{
-		pid = ft_atoi(argv[1]);
-		msg = argv[2];
+		i = 7;
+		while (i >= 0)
+		{
+			bit = (msg[c] >> i) & 1;
+			if (bit == 0)
+				kill(pid, SIGUSR1);
+			else
+				kill(pid, SIGUSR2);
+			i--;
+		}
+		write(1, " ", 1);
+		c++;
 	}
+}
+
+int	main(int argc, char **argv)
+{
+	if (argc == 3)
+		sender(ft_atoi(argv[1]), argv[2]);
 	else
-		write(1, "\e[1;31mError:\e[1;97m Not Enough Argument\n\e[0m", 45);
+		write(1, "\e[1;97mUsage:\e[0m ./client <PID> <Message>\n", 43);
+	return (0);
 }

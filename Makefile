@@ -6,7 +6,7 @@
 #    By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/02 13:34:42 by flmarsou          #+#    #+#              #
-#    Updated: 2024/07/02 16:01:36 by flmarsou         ###   ########.fr        #
+#    Updated: 2024/07/03 11:05:33 by flmarsou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ SRC_UTILS =		./src/utils/ft_putchr.c \
 				./src/utils/ft_putstr.c \
 				./src/utils/ft_putnbr.c \
 				./src/utils/ft_atoi.c \
+				./src/utils/ft_strlen.c \
 
 OBJ_SERVER =	${SRC_SERVER:.c=.o} ${SRC_UTILS:.c=.o}
 OBJ_CLIENT =	${SRC_CLIENT:.c=.o} ${SRC_UTILS:.c=.o}
