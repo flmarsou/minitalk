@@ -29,9 +29,9 @@ static void	sender(int pid, char *msg)
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
+			usleep(10000);
 			i--;
 		}
-		write(1, " ", 1);
 		c++;
 	}
 }
