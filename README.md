@@ -7,7 +7,7 @@ WIP
 1. Run `make` to compile the server and the client.
 Run `make re` to recompile everything.
 2. Run `./server` to execute the server.
-3. Run `./client <PID> <messasge>` <ins>in another terminal!</ins>
+3. Run `./client <PID> "messasge"` <ins>in another terminal!</ins>
 
 # 🧼 Cleaning
 
@@ -27,4 +27,6 @@ Run `make re` to recompile everything.
 
 # 📑 List of Functions
 
-WIP
+## Main Files
+- [x] [`client`](https://github.com/flmarsou/3.2-minitalk/blob/main/src/client.c) - Converts every characters of a string into bits, sending them individually in `SIGUSR1` and `SIGUSR2` using the server's PID.
+- [x] [`server`](https://github.com/flmarsou/3.2-minitalk/blob/main/src/server.c) - WIP
