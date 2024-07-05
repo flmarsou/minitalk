@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   ft_puterr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/02 13:33:25 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/07/05 11:32:23 by flmarsou         ###   ########.fr       */
+/*   Created: 2024/07/05 09:37:53 by flmarsou          #+#    #+#             */
+/*   Updated: 2024/07/05 09:38:39 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "../../includes/minitalk.h"
 
-# include <unistd.h>
-# include <signal.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-
-void		ft_putchr(char c);
-void		ft_putstr(char *str);
-void		ft_putnbr(int nbr);
-void		ft_puterr(char *str);
-int toto();
-
-int			ft_atoi(char *str);
-int			ft_strlen(char *str);
-
-#endif
+void	ft_puterr(char *str)
+{
+	ft_putstr(str);
+	exit(1);
+}
