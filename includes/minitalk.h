@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:33:25 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/07/05 11:32:23 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/07/08 08:46:13 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,10 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-
 void		ft_putchr(char c);
 void		ft_putstr(char *str);
 void		ft_putnbr(int nbr);
 void		ft_puterr(char *str);
-int toto();
-
 int			ft_atoi(char *str);
 int			ft_strlen(char *str);
 

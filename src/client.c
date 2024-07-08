@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:49:12 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/07/05 15:52:11 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/07/08 08:45:52 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,6 @@ static void	sender(int pid, char *msg)
 				if (kill(pid, SIGUSR2) == -1)
 					ft_puterr("\e[1;31m[x] - Failed to send signal!\e[0m\n");
 			}
-			usleep(1000);
-		}
-		i = 8;
-		while (i--)
-		{
-			if (kill(pid, SIGUSR1) == -1)
-				ft_puterr("\e[1;31m[x] - Failed to send signal!\e[0m\n");
 			usleep(1000);
 		}
 	}
