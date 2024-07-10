@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:49:12 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/07/08 08:45:52 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/07/10 16:05:24 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ static void	sender(int pid, char *msg)
 		{
 			bit = (msg[c] >> i) & 1;
 			if (bit == 0)
-			{
-				if (kill(pid, SIGUSR1) == -1)
-					ft_puterr("\e[1;31m[x] - Failed to send signal!\e[0m\n");
-			}
+				kill(pid, SIGUSR1);
 			else
-			{
-				if (kill(pid, SIGUSR2) == -1)
-					ft_puterr("\e[1;31m[x] - Failed to send signal!\e[0m\n");
-			}
-			usleep(1000);
+				kill(pid, SIGUSR2);
+			usleep(300);
 		}
+	}
+	i = 8;
+	while (i--)
+	{
+		kill(pid, SIGUSR1);
+		usleep(300);
 	}
 }
 

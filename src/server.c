@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:13:06 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/07/08 15:39:08 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/07/10 15:56:14 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,35 @@ static void	printer(void)
 	ft_putstr("\e[97;1mUse: ./client <PID> \"message\"\n");
 }
 
-// static void	sig_handler(int sugnum)
-// {
-	
-// }
+static void	receiver(int signum, siginfo_t *info, void *context)
+{
+	static unsigned char	byte;
+	static unsigned int		bit;
+	(void)info;
+	(void)context;
+
+	if (signum == SIGUSR1)
+		byte = byte << 1;
+	else if (signum == SIGUSR2)
+		byte = (byte << 1) | 1;
+	bit++;
+	if (bit == 8)
+	{
+		ft_putchr(byte);
+		byte = 0;
+		bit = 0;
+	}
+}
 
 int	main(void)
 {
+	struct sigaction	sa;
+
 	printer();
+	sa.sa_sigaction = receiver;
+	sigaction(SIGUSR1, &sa, NULL);
+	sigaction(SIGUSR2, &sa, NULL);
 	while (1)
-	{
-		// signal(SIGUSR1, sig_handler);
-		// signal(SIGUSR2, sig_handler);
 		pause();
-	}
 	return (0);
 }

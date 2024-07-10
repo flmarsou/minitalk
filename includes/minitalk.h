@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 13:33:25 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/07/08 08:46:13 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/07/09 15:32:28 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 # include <unistd.h>
 # include <signal.h>
 # include <stdlib.h>
-# include <stdio.h>
+
+typedef struct s_minitalk
+{
+	char	character;
+	int		bits;
+	char	*string;
+}			t_minitalk;
 
 void		ft_putchr(char c);
 void		ft_putstr(char *str);
