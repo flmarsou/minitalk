@@ -6,7 +6,7 @@
 /*   By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:13:06 by flmarsou          #+#    #+#             */
-/*   Updated: 2024/07/11 10:22:34 by flmarsou         ###   ########.fr       */
+/*   Updated: 2024/07/11 13:04:22 by flmarsou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,12 @@ static void	receiver(int signum, siginfo_t *info, void *context)
 		{
 			buffer[i] = '\0';
 			ft_putstr(buffer);
-			kill(info->si_pid, SIGUSR2);
+			usleep(1000);
+			kill(info->si_pid, SIGUSR1);
 			i = 0;
 		}
 		byte = 0;
 		bit = 0;
-		kill(info->si_pid, SIGUSR1);
 	}
 }
 
