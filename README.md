@@ -4,8 +4,8 @@ A little program to learn about **UNIX signals**. \
 The goal is to make two terninal communicate with one another, using **PID** *(**P**rocess **Id**entifier)*, **signals**, **binary shifting**...
 
 - Since signals can only send one information at a time, the client will deconstruct the string into bits, sending `SIGUSR1` for 0 and `SIGUSR2` for 1 with the `kill()` function.
-- The server awaits indefinitely `pause()` information `signal()`, and translates back the binary into printable characters.
-- Finally, the server will send back to the client how many information it received, terminating the client. 
+- The server awaits indefinitely `pause()` information `signal()`, and translates back the binary into characters, storing them in a buffer for later printing.
+- Finally, the server will send back to the client if it successfully received the message, terminating the client. 
 
 # ⚒️ Compilation
 
