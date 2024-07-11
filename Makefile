@@ -6,7 +6,7 @@
 #    By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/02 13:34:42 by flmarsou          #+#    #+#              #
-#    Updated: 2024/07/11 08:38:20 by flmarsou         ###   ########.fr        #
+#    Updated: 2024/07/11 13:16:40 by flmarsou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,6 @@ SRC_CLIENT =	./src/client.c \
 SRC_UTILS =		./src/utils/ft_putchr.c \
 				./src/utils/ft_putstr.c \
 				./src/utils/ft_putnbr.c \
-				./src/utils/ft_puterr.c \
 				./src/utils/ft_atoi.c \
 				./src/utils/ft_strlen.c \
 
