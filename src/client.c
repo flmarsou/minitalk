@@ -18,7 +18,7 @@ static void	received(int signum)
 
 	if (signum == SIGUSR1)
 		size++;
-	else if (signum == SIGUSR2)
+	else
 	{
 		ft_putnbr(size);
 		ft_putchr('\n');
@@ -61,11 +61,11 @@ int	main(int argc, char **argv)
 		ft_putstr("\e[1;97mUsage:\e[0m ./client <PID> \"Message\"\n");
 		exit(1);
 	}
-	signal(SIGUSR1, received);
-	signal(SIGUSR2, received);
 	ft_putstr("\e[1;97mByte Sent: ");
 	ft_putnbr(ft_strlen(argv[2]));
 	ft_putstr("\nByte Received: ");
+	signal(SIGUSR1, received);
+	signal(SIGUSR2, received);
 	sender(ft_atoi(argv[1]), argv[2]);
 	while (1)
 		pause();
