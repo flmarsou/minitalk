@@ -6,7 +6,7 @@
 #    By: flmarsou <flmarsou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/02 13:34:42 by flmarsou          #+#    #+#              #
-#    Updated: 2024/07/09 09:04:21 by flmarsou         ###   ########.fr        #
+#    Updated: 2024/07/11 08:38:20 by flmarsou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ OBJ_CLIENT =	${SRC_CLIENT:.c=.o} ${SRC_UTILS:.c=.o}
 
 # Variables
 CC		= cc
-CFLAGS	=  -g3 -fsanitize=address
+CFLAGS	= -Wall -Werror -Wextra -g3 -fsanitize=address
 RM		= rm -f
 
 RESET		= \e[0m
