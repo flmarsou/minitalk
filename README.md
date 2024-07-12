@@ -34,7 +34,7 @@ Run `make re` to recompile everything.
 
 ## Main Files
 - [x] [`client`](https://github.com/flmarsou/3.2-minitalk/blob/main/src/client.c): \
-Converts every characters of a string into bits, sending them individually through `SIGUSR1` and `SIGUSR2`. \
+Converts every characters of a string into bits, sending them individually through `SIGUSR1` and `SIGUSR2`.
 
 - [x] [`server`](https://github.com/flmarsou/3.2-minitalk/blob/main/src/server.c): \
-Receives bits through `SIGUSR1` and `SIGUSR2`, translating it back to characters for printing.
+Receives bits through `SIGUSR1` and `SIGUSR2`, translating it back to characters for printing and notifies the client.
