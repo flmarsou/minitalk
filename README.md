@@ -26,11 +26,11 @@ The goal is to make two terminals to communicate with one another using **Proces
 | Program name | client, server |
 | Turn in files | Makefile, *.h, *.c |
 | Makefile | NAME, all, clean, fclean, re |
-| External functs. | write, [`ft_printf`](https://github.com/flmarsou/2.1-ft_printf), signal, sigemptyset, sigaddset, sigaction, kill, getpid, malloc, free, pause, sleep, usleep, exit |
-| [Libft](https://github.com/flmarsou/1-Libft) authorized | Yes |
+| External functs. | write, [`ft_printf`](https://github.com/flmarsou/ft_printf), signal, sigemptyset, sigaddset, sigaction, kill, getpid, malloc, free, pause, sleep, usleep, exit |
+| [Libft](https://github.com/flmarsou/libft) authorized | Yes |
 | Description | Write a program for two terminal to exchange using UNIX signals. |
 
 # 📑 List of Functions
 
-- [x] [`client`](https://github.com/flmarsou/3.2-minitalk/blob/main/src/client.c) - Sends signals to the server, waits for an acknowledgment, and returns.
-- [x] [`server`](https://github.com/flmarsou/3.2-minitalk/blob/main/src/server.c) - Waits for signals, prints once fully received, and sends an acknowledgment.
+- [x] [`client`](https://github.com/flmarsou/minitalk/blob/main/src/client.c) - Sends signals to the server, waits for an acknowledgment, and returns.
+- [x] [`server`](https://github.com/flmarsou/minitalk/blob/main/src/server.c) - Waits for signals, prints once fully received, and sends an acknowledgment.
